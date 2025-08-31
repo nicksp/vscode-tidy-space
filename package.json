@@ -1,0 +1,112 @@
+{
+  "publisher": "nicksp",
+  "name": "tidy-space",
+  "displayName": "Tidy Space",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.15.0",
+  "description": "Keep your workspace clutter-free: only one sidebar at a time",
+  "author": {
+    "name": "Nick Plekhanov"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nicksp/vscode-tidy-space#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicksp/vscode-tidy-space"
+  },
+  "bugs": {
+    "url": "https://github.com/nicksp/vscode-tidy-space/issues"
+  },
+  "galleryBanner": {
+    "color": "#f8f8f8"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "keywords": [
+    "terminal",
+    "productivity",
+    "panel",
+    "side",
+    "bar",
+    "hide",
+    "auto",
+    "sidebar",
+    "ui",
+    "ux"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "icon": "images/icon.png",
+  "engines": {
+    "node": ">=20.0.0",
+    "vscode": "^1.94.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "tidySpace.toggleSidebarVisibility",
+        "title": "Toggle Primary Side Bar Visibility",
+        "category": "Tidy Space"
+      },
+      {
+        "command": "tidySpace.toggleAuxiliaryBar",
+        "title": "Toggle Secondary Side Bar Visibility",
+        "category": "Tidy Space"
+      }
+    ],
+    "configuration": {
+      "title": "Tidy Space",
+      "properties": {
+        "tidySpace.closePanel": {
+          "type": "boolean",
+          "default": false,
+          "description": "Also close the bottom panel (Terminal/Problems/Outline/Output) when switching sidebars."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "nr build --watch --sourcemap",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "vscode:prepublish": "NODE_ENV=production nr build",
+    "publish": "vsce publish --no-dependencies",
+    "publish:ovsx": "nlx ovsx publish",
+    "pack": "vsce package --no-dependencies",
+    "test": "vitest",
+    "test:ci": "vitest --run",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && nr publish && nr publish:ovsx",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "@antfu/ni": "^25.0.0",
+    "@types/node": "^22.17.2",
+    "@types/vscode": "^1.94.0",
+    "@vscode/vsce": "^3.6.0",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.34.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.1.5",
+    "pnpm": "^10.15.0",
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "vitest": "^3.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx,md}": "eslint . --fix"
+  }
+}
