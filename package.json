@@ -2,7 +2,7 @@
   "publisher": "nicksp",
   "name": "tidy-space",
   "displayName": "Tidy Space",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.15.0",
   "description": "Keep your workspace clutter-free: only one sidebar at a time",
