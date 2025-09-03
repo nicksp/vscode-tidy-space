@@ -81,6 +81,12 @@ Check out my other Visual Studio Code extensions:
 - [Reveal on GitHub](https://marketplace.visualstudio.com/items?itemName=nicksp.reveal-on-github) — open the current project or file on GitHub
 - [Notelets](https://marketplace.visualstudio.com/items?itemName=nicksp.notelets) — add sticky notes to any file in your workspace
 
+## Sponsoring
+
+This project is maintained in my spare time. If this has been helpful to you, consider supporting its continued development and maintenance.
+
+<a href="https://buymeacoffee.com/plekhanov" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-yellow.png" alt="Buy Me A Coffee" height="51" width="217"></a>
+
 ## Contributing
 
 Bug fixes are welcome, but not new features. Read our [contributing guidelines](CONTRIBUTING.md) to learn more.
